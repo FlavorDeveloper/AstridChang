@@ -1,0 +1,702 @@
+/* Font------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Nothing+You+Could+Do&family=Protest+Revolution&display=swap');
+
+/* Reset-----------------------------------------------------*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid red; */
+}
+
+/* Global Styling--------------------------------------------*/
+
+:root {
+    font-size: 62.5%;
+    --white-color:#FDFFFC;
+    --rose-color:#F1C5C4;
+    --yellow-color:rgb(255, 215, 141);
+    --black-color:#252422;
+    --blue-color:#b0e5eb;
+    --whatsapp-color:#26D367;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--white-color);
+    padding-top: 6rem;
+}
+
+/* Container-------------------------------------------------*/
+
+.container {
+    width: 100%;
+    max-width: 120rem;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* Banner----------------------------------------------------*/
+
+.banner {
+    height: 6rem;
+    background-color: #C9E4FC;
+}
+
+.banner__title {
+    font-family: "Nunito", sans-serif;
+    font-size: 4rem;
+    line-height: 6rem;
+    text-align: center;
+    color: #FDFFFC;
+}
+
+/* Whatsapp Buttom-------------------------------------------*/
+
+    .whatsapp-btn {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        display: block;
+        width: 8rem;
+        height: 8rem;
+        margin: 4%;
+        border-radius: 50%;
+        background-image: url(Assets/gif.gif);
+        background-size: cover;
+        z-index: 9999;
+    }
+
+/* Navbar----------------------------------------------------*/
+
+.header-navbar {
+    width: 100%;
+    height: 6rem;
+    background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+.navbar {
+    width: 100%;
+    height: 6rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar__logo-link {
+    text-decoration: none;
+}
+
+.navbar__logo {
+    font-family: "Nothing You Could Do", cursive;
+    line-height: 6rem;
+    text-decoration: none;
+    font-size: 2.6rem;
+    padding: 0 .5rem;
+    color: var(--white-color);
+}
+
+.navbar__lists {
+    list-style: none;
+    display: flex;
+    line-height: 6rem;
+}
+
+.navbar__link {
+    text-decoration: none;
+    font-size: 1.6rem;
+    margin-right: 4rem;
+    color: aliceblue;
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    text-transform: uppercase;
+    transition: background-color .3s;
+}
+
+.navbar__link:hover {
+    background-color: rgba(180, 144, 202, .6);
+}
+
+.navbar__toggle {
+    color: aliceblue;
+    background: none;
+    border: none;
+    font-size: 3rem;
+    line-height: 6rem;
+    display: none;
+    cursor: pointer;
+}
+
+/* Section Image slider--------------------------------------*/
+
+.slider-container {
+    height: calc(100vh - 6rem - 2rem);
+    margin: 1rem auto;
+    border-radius: clamp(0rem, -1.771rem + 2.309vw, 1rem);
+    overflow: hidden;
+}
+
+.slider-item__lists {
+    list-style: none;
+    width: 400%;
+    height: calc(100vh - 6rem - 2rem);
+    display: flex;
+    animation: slider 20s infinite ease-in-out;
+    overflow: hidden;
+}
+
+.slider-item__img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.slider-item__img {
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+.slider-item__img--1 {
+    background-image: url(Assets/hero1.jpg);
+}
+
+.slider-item__img--2 {
+    background-image: url(Assets/hero2.jpg);
+}
+
+.slider-item__img--3 {
+    background-image: url(Assets/hero3.jpg);
+}
+
+.slider-item__img--4 {
+    background-image: url(Assets/hero4.jpg);
+}
+
+.slider-item__title {
+    width: 100%;
+    font-size: clamp(4rem, 3.27rem + 2.275vw, 6rem);
+    text-align: center;
+    color: #FDFFFC;
+    background-color: rgba(0, 0, 0, .2);
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.slider-item__paragraph {
+    width: 100%;
+    padding: 0 4rem;
+    text-align: center;
+    color: #FDFFFC;
+    font-size: clamp(2.5rem, 2.317rem + 0.569vw, 3rem);
+    line-height: 1.5;
+    background-color: rgba(0, 0, 0, .2);
+    padding-bottom: 2rem;
+}
+
+/* Keyframes-------------------------------------------------*/
+
+@keyframes slider {
+    0% {margin-left: 0%;}
+    20% {margin-left: 0%;}
+
+    25% {margin-left: -100%;}    
+    45% {margin-left: -100%;}
+
+    50% {margin-left: -200%;}    
+    70% {margin-left: -200%;}
+
+    75% {margin-left: -300%;}    
+    100% {margin-left: -300%;}    
+}
+
+/* Section how i am------------------------------------------*/
+
+.Howiam-container {
+    min-height: calc(100vh - 2rem);
+    margin: 1rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.Howiam-item__picture {
+    width: calc(100% * 0.30);
+    min-height: calc((100vh - 8rem) / 2 - 1rem);
+    background-image: url(Assets/astrid2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    border-radius: clamp(0rem, -1.771rem + 2.309vw, 1rem);
+    background-color: #C9E4FC;
+}
+
+.Howiam-item__texts {
+    width: calc(100% * 0.70 - 1rem);
+    min-height: calc((100vh - 8rem) / 2 - 1rem);
+    color: var(--black-color);
+}
+
+.Howiam-item__title {
+    padding: 1rem;
+    font-size: clamp(2rem, 1.27rem + 2.275vw, 4rem);
+}
+
+.Howiam-item__paragraph {
+    padding: 1rem;
+    font-size: clamp(1.6rem, 1.527rem + 0.228vw, 1.8rem);
+    line-height: 1.5;
+}
+
+.Howiam-item__picture-2 {
+    width: 100%;
+    min-height: calc((100vh - 8rem) / 2);
+    background-image: url(Assets/redes.jpg);
+    background-size: cover;
+    border-radius: clamp(0rem, -1.771rem + 2.309vw, 1rem);
+    font-size: clamp(2.5rem, 2.317rem + 0.569vw, 3rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Howiam-item__title-2 {
+    font-size: clamp(2rem, 1.27rem + 2.275vw, 4rem);
+    padding: 1rem 2rem;
+    border-radius: clamp(0rem, -1.771rem + 2.309vw, 1rem);
+    background-color: rgba(0, 0, 0, .2);
+    color: #FDFFFC;
+}
+
+/* Section Services------------------------------------------*/
+
+.services-container {
+    min-height: calc(100vh - 2rem);
+    margin: 1rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.services-item__box {
+    width: calc(100% / 2 - .5rem);
+    min-height: calc((100vh - 6rem) / 2 - 2rem);
+    border-radius: clamp(0rem, -1.771rem + 2.309vw, 1rem);
+}
+
+.services-item__box--1 {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, .2), rgba(0, 0, 0, .1)) ,url(Assets/fondo1.jpg);
+    background-size: cover;
+}
+
+.services-item__box--2 {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, .2), rgba(0, 0, 0, .1)) ,url(Assets/fondo2.jpg);
+    background-size: cover;
+}
+
+.services-item__box--3 {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, .2), rgba(0, 0, 0, .1)) ,url(Assets/fondo3.jpg);
+    background-size: cover;
+}
+
+.services-item__box--4 {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, .2), rgba(0, 0, 0, .1)) ,url(Assets/fondo4.jpg);
+    background-size: cover;
+}
+
+.services-item__title {
+    text-align: center;
+    color: #FDFFFC;
+    font-size: clamp(2rem, 1.27rem + 2.275vw, 4rem);
+    padding: 1rem;
+}
+
+.services-item__description {
+    font-size: 1.8rem;
+    padding: 1.5rem 1rem;
+    list-style: square;
+    list-style-position: inside;
+    color: #FDFFFC;
+}
+
+/* Section Plans---------------------------------------------*/
+
+.plans-container {
+    min-height: 100vh;
+}
+
+.plans-container__cards {
+    min-height: calc(100vh - 6rem - 2rem);
+    margin: 1rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+}
+
+.plans-item__card {
+    width: calc((100% - 2rem) / 3);
+    min-height: calc(100vh / 2);
+    border-radius: clamp(0rem, -1.771rem + 2.309vw, 1rem);
+    background-color: var(--rose-color);
+    color: var(--black-color);
+    overflow: hidden;
+    flex-grow: 1;
+}
+
+.plans-item__card--2 {
+    background-color: var(--yellow-color);
+}
+
+.plans-item__card--3 {
+    background-color: var(--yellow-color);
+}
+
+.plans-item__card--4 {
+    background-color: var(--blue-color);
+}
+
+/* Image container-------------------------------------------*/
+
+.plans-item__picture {
+    width: 100%;
+    height: 20rem;
+}
+
+.plans-item__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+}
+
+/* Texts container-------------------------------------------*/
+
+.plans-item__texts {
+    width: 100%;
+}
+
+.plans-item__title {
+    text-align: center;
+    font-size: clamp(2.5rem, 2.317rem + 0.569vw, 3rem);
+    padding: 1rem .5rem;
+}
+
+.plans-item__description {
+    font-size: 1.6rem;
+    padding: 1rem;
+    list-style: inside;
+    list-style-type: square;
+    line-height: 1.5;
+}
+
+.plans-item__paragraph {
+    text-align: center;
+    font-size: 1.6rem;
+    padding: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+/* Section Contact---------------------------------------*/
+
+.contact {
+    min-height: 100vh;
+}
+
+.contact-container {
+    min-height: calc(100vh - 6rem - 2rem);
+    margin: 1rem auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    position: relative;
+}
+
+.texts-item {
+    width: 70%;
+    margin: 4rem;
+    border-radius: clamp(0rem, -1.771rem + 2.309vw, 1rem);
+    background-color: var(--rose-color);
+}
+
+.contact__title {
+    text-align: center;
+    padding: 1rem 4rem;
+    font-size: clamp(3rem, 1.904rem + 3.413vw, 6rem);
+    letter-spacing: .5rem;
+    color: #FDFFFC;
+}
+
+.contact__sub-title {
+    text-align: center;
+    padding: 4rem 6rem;
+    font-size: clamp(2.5rem, 2.317rem + 0.569vw, 3rem);
+    letter-spacing: .2rem;
+    color: #FDFFFC;
+}
+
+.mediaIcons__container {
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 4rem 0;
+    margin: 0 auto;
+}
+
+.icon__link {
+    display: block;
+}
+
+.fa-brands {
+    font-size: clamp(3rem, 1.174rem + 5.688vw, 8rem);
+    padding: 1rem;
+    border-radius: clamp(0rem, -1.771rem + 2.309vw, 1rem);
+}
+
+.fa-instagram {
+    color: #E619A4;
+}
+
+.fa-facebook {
+    color: #1373FF;
+}
+
+.fa-x-twitter {
+    color: var(--black-color);
+}
+
+.fa-linkedin-in {
+    color: #0B66C3;
+}
+
+.contact__paragraph {
+    text-align: center;
+    font-size: clamp(2.5rem, 2.317rem + 0.569vw, 3rem);
+    font-weight: 600;
+    letter-spacing: .2rem;
+    color: #FDFFFC;
+    padding: 2rem;
+}
+
+.contact__paragraph--light {
+    font-weight: normal;
+    font-size: clamp(1.6rem, 1.527rem + 0.228vw, 1.8rem);
+}
+
+.contact__picture {
+    position: absolute;
+    width: 30%;
+    height: 50vh;
+    top: 0;
+    left: 0;
+    margin: 4%;
+    background-image: url(Assets/contact.jpg);
+    background-size: cover;
+    background-position: top, right;
+    background-repeat: no-repeat;
+    background-color: #F6AF3B;
+    border-radius: clamp(0rem, -1.771rem + 2.309vw, 1rem);
+}
+
+/* Section Footer----------------------------------------*/
+
+.footer-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 1rem 1rem 0 0;
+    background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+    color: #FDFFFC;
+}
+
+.footer-item__title {
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+.footer__paragraph {
+    font-size: 1.8rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.footer__paragraph--flavor {
+    padding: 0;
+}
+
+.footer__picture {
+    width: 10rem;
+}
+
+/* Media Queries 767px-----------------------------------*/
+
+@media (max-width:767px) {
+
+/* Navabar-----------------------------------------------*/
+
+    .navbar__lists {
+        flex-direction: column;
+        background-image: linear-gradient(-225deg, #5271C4 0%, #B19FFF 48%, #ECA1FE 100%);
+        position: fixed;
+        left: 0;
+        width: 100%;
+        align-items: center;
+        border-radius: 0 0 1rem 1rem;
+        overflow-y: auto;
+        top: -100%;
+        transition: top .5s;
+    }
+
+    .navbar__link {
+        margin: 0;
+    }
+
+    .navbar__link:hover {
+        background: none;
+        color: #5ee7df;
+    }
+
+    .navbar__toggle {
+        display: block;
+        margin-right: 4rem;
+    }
+
+    .navbar__lists--visible {
+        top: 6rem;
+    }
+
+/* Image slider----------------------------------------------*/
+
+    /* No Queries */
+
+/* Section Plans---------------------------------------------*/
+
+    .plans-item__picture {
+        width: 100%;
+    }
+    
+    .plans-item__card {
+        width: calc((100% - 2rem) / 2);
+    }
+}
+
+/* Media Queries 700px---------------------------------------*/
+
+@media (max-width:700px) and (orientation:portrait) {
+
+/* Section how i am------------------------------------------*/
+
+    .Howiam-item__picture {
+        width: 100%;
+        min-height: calc((100vh - 6rem) / 3);
+        background-image: url(Assets/astrid-colors.png);
+        background-size: cover;
+        background-position: top;
+    }
+
+    .Howiam-item__texts {
+        width: 100%;
+        min-height: calc((100vh - 6rem) / 3);
+    }
+
+    .Howiam-item__title {
+        text-align: center;
+    }
+
+    .Howiam-item__picture-2 {
+        min-height: calc((100vh - 6rem) / 3);
+    }
+
+/* Section Services------------------------------------------*/
+
+    .services-item__box {
+        width: 100%;
+        min-height: calc((100vh - 6rem - 4rem) / 2 - .5rem);
+    }
+
+/* Services Contact------------------------------------------*/
+
+    .contact__picture {
+        position: static;
+        width: 100%;
+        height: 30vh;
+        min-height: 30vh;
+        margin: 0;
+        background-size: contain;
+    }
+
+    .texts-item {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+/* Media Queries 550px Portrait------------------------------*/
+
+@media (max-width: 550px) and (orientation:portrait) {
+
+    .plans-item__card {
+        width: 100%;
+    }
+}
+
+/* Media Queries Landscape (max-width:550px)-----------------*/
+
+
+/* Image slider----------------------------------------------*/
+
+
+@media (max-width:550px) and (orientation:landscape) {
+
+    .slider-item__title {
+        font-size: clamp(2rem, -0.816rem + 8.772vw, 4rem);
+    }
+    
+    .slider-item__paragraph {
+        font-size: clamp(1.6rem, 1.037rem + 1.754vw, 2rem);
+    }
+
+/* Section Contact-------------------------------------------*/
+
+    .contact__title {
+        font-size: clamp(1.6rem, -0.007rem + 5.006vw, 6rem);
+        letter-spacing: 0;
+    }
+
+    .contact__sub-title {
+        font-size: clamp(1.6rem, -0.007rem + 5.006vw, 6rem);
+        letter-spacing: 0;
+        color: #FDFFFC;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
