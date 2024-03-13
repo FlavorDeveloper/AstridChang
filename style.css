@@ -259,7 +259,6 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    align-items: center;
 }
 
 .howiam__subtitle {
@@ -267,6 +266,7 @@ a {
     color: var(--white-color);
     background-color: rgba(0, 0, 0, .2);
     border-radius: 1rem;
+    text-align: center;
 }
 
 /* Section services--------------------------------------------*/
